@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+[data-theme="dark"] body {
+    background-color: #3E3E42;
+    transition: ease-in-out .2s;
+}
+
+[data-theme="light"] body {
+    transition: ease-in-out .2s;
+}

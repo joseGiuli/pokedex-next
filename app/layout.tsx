@@ -4,7 +4,7 @@ import { Providers } from "@/components/darkmode/providers";
 
 import localFont from "@next/font/local";
 import { Poppins } from "@next/font/google";
-import { PokemonGrid } from "@/components/pokegrid";
+import { PokemonGrid } from "@/components/pokemon-grid";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,7 +19,7 @@ const pokemon = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Template",
+  title: "PokéApi",
 };
 
 export default function RootLayout({
@@ -29,15 +29,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${poppins.variable} ${pokemon.variable}`}>
-        <main className="flex flex-col items-center p-8">
-          <div className="z-10 w-full max-w-6xl items-center justify-center">
-            <h1 className="text-3xl text-center font-pokemon mb-8">
-              Pokédex com pokeAPI
-            </h1>
-            <Providers>{children}</Providers>
-          </div>
-        </main>
+      <head>
+        <link rel="icon" href="./favicon.ico" sizes="42x42" />
+      </head>
+      <body
+        className={`${poppins.variable} ${pokemon.variable} flex flex-col items-center p-8 font-poppins`}
+      >
+        <div className="z-10 w-full max-w-6xl items-center justify-center">
+          <h1 className="text-3xl text-center font-pokemon mb-8">
+            Pokédex com pokeAPI
+          </h1>
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );

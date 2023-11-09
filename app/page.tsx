@@ -1,12 +1,14 @@
 import DarkModeButton from "@/components/darkmode/DarkMode";
-import { PokemonGrid } from "@/components/pokegrid";
+import { PokemonGrid } from "@/components/pokemon-grid";
 
-export default function Home() {
+import { getPokemonList } from "@/lib/pokemonApi";
+
+export default async function Home() {
+  const pokemonList = await getPokemonList();
+
   return (
     <>
-      <main className="mb-12 text-center lg:mb-0 lg:flex lg:justify-center">
-        <PokemonGrid />
-      </main>
+      <PokemonGrid pokemonList={pokemonList} />
 
       <DarkModeButton />
     </>
