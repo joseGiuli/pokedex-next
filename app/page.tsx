@@ -9,7 +9,6 @@ export default async function Home() {
   return (
     <>
       <PokemonGrid pokemonList={pokemonList} />
-
       <DarkModeButton />
     </>
   );

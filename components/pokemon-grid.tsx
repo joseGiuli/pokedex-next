@@ -28,9 +28,7 @@ export function PokemonGrid({ pokemonList }: PokemonGridProps) {
       <div className="flex items-center flex-col mb-8">
         <h3 className="text-2xl py-6 text-center">Encontre seu Pokémon!</h3>
         <div className="flex flex-col w-full max-w-sm items-center jusif gap-1.5 mb-12">
-          <Label htmlFor="pokemonName" className="mb">
-            Nome do Pokemon
-          </Label>
+          <Label htmlFor="pokemonName">Nome do Pokemon</Label>
           <Input
             type="text"
             value={searchTxt}

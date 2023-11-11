@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "@/components/darkmode/providers";
-
+import Providers from "@/components/darkmode/providers";
 import localFont from "@next/font/local";
 import { Poppins } from "@next/font/google";
 import { PokemonGrid } from "@/components/pokemon-grid";
+import Head from "next/head";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 const pokemon = localFont({
-  src: "../public/fonts/pokefont/PokemonSolid.ttf",
+  src: "../public/fonts/pokefont/PokemonHollow.ttf",
   display: "swap",
   variable: "--font-pokemon",
 });
@@ -29,11 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <head>
-        <link rel="icon" href="./favicon.ico" sizes="42x42" />
-      </head>
       <body
-        className={`${poppins.variable} ${pokemon.variable} flex flex-col items-center p-8 font-poppins`}
+        className={`${poppins.variable} ${pokemon.variable} flex flex-col items-center p-8 font-poppins dark:transition dark:bg-grayDarkMode`}
       >
         <div className="z-10 w-full max-w-6xl items-center justify-center">
           <h1 className="text-3xl text-center font-pokemon mb-8">
