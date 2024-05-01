@@ -1,5 +1,3 @@
-Projeto dedicado para treinar, relembrar e aprender conceitos de JS, Tailwind, Next, React e conceitos sobre API.
-
 
 ## Getting Started
 
