@@ -3,8 +3,6 @@ import "./globals.css";
 import Providers from "@/components/darkmode/providers";
 import localFont from "@next/font/local";
 import { Poppins } from "@next/font/google";
-import { PokemonGrid } from "@/components/pokemon-grid";
-import Head from "next/head";
 
 const poppins = Poppins({
   subsets: ["latin"],
